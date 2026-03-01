@@ -1,13 +1,24 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.util.ArrayList;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public class Main {
+    public static void main(String[] args) {
+
+        ConversorDeMoeda conversorUm = new ConversorDeMoeda(15.00, 20.00);
+        ConversorDeMoeda conversorDois = new ConversorDeMoeda(20.00, 20.00);
+        ConversorDeMoeda conversorTres = new ConversorDeMoeda(60.00, 40.00);
+
+        ArrayList<ConversorDeMoeda> conversor =  new ArrayList<>();
+
+        conversor.add(conversorUm);
+        conversor.add(conversorDois);
+        conversor.add(conversorTres);
+
+        for (ConversorDeMoeda conversorDeMoeda : conversor) {
+            double dolarConvertido = conversorDeMoeda.getDolar() * conversorDeMoeda.getRateCambio();
+            System.out.println("VALORES RECEBIDOS " +
+                    "\nValor do câmbio R$: " + conversorDeMoeda.getRateCambio() +
+                    "\nValor do dolar R$: " + conversorDeMoeda.getDolar());
+            System.out.println("Valor convertido: " + dolarConvertido + "\n");
+        }
     }
 }
