@@ -1,0 +1,17 @@
+[
+  {
+    "RateCambio": 15.0,
+    "Dolar": 20.0,
+    "Resultados": 300.0
+  },
+  {
+    "RateCambio": 20.0,
+    "Dolar": 20.0,
+    "Resultados": 400.0
+  },
+  {
+    "RateCambio": 60.0,
+    "Dolar": 40.0,
+    "Resultados": 2400.0
+  }
+]
